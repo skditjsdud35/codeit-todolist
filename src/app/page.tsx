@@ -15,10 +15,11 @@ const Home = () => {
   const { todos } = useItemStore();
   const windowWidth = useWindowWidth();
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     if (!inputValue) return;
 
-    const newTodo: PostItem = { name: inputValue, isCompleted: false, id: Date.now() };
+    const newTodo: PostItem = { name: inputValue };
     addItem(newTodo);
     setInputValue(''); // 입력값 초기화
   };
