@@ -15,10 +15,6 @@ export interface GetItemDetail extends GetItem {
 // Item 추가 type
 export interface PostItem {
     name: string;
-    memo?: string | null;
-    imageUrl?: string | null;
-    isCompleted: boolean;
-    id: number;
 }
 
 // Item 수정 type
