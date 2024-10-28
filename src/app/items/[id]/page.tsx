@@ -61,6 +61,7 @@ const ItemsPage = () => {
         if (!todo) return; // todo가 없을 경우 종료
 
         const { id, ...rest } = todo; // id를 분리하고 나머지 속성을 rest에 담음
+        console.log(id);
 
         const todoData: PatchItem = {
             ...rest, // id를 제외한 나머지 속성 사용
@@ -76,7 +77,7 @@ const ItemsPage = () => {
                 router.push('/')
             },
             onError: (error) => {
-                alert("수정에 실패하였습니다. 잠시 후 다시 시도해주세요.");
+                alert(error || "수정에 실패하였습니다. 잠시 후 다시 시도해주세요.");
             }
         });
     };
@@ -92,7 +93,7 @@ const ItemsPage = () => {
                 router.push('/')
             },
             onError: (error) => {
-                alert("삭제에 실패하였습니다. 잠시 후 다시 시도해주세요.");
+                alert(error || "삭제에 실패하였습니다. 잠시 후 다시 시도해주세요.");
             }
         });
 

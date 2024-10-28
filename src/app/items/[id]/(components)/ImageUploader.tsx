@@ -22,8 +22,8 @@ const ImageUploader = ({ imageUrl, onImageChange }: ImageProps) => {
 
     const onImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
         const url = await handleImageUpload(event, setSelectedImage, setBackgroundImage, setErrorMessage);
+        console.log(selectedImage);
         if (url && onImageChange) {
-            console.log(url)
             onImageChange(url);
         }
     };

@@ -18,10 +18,7 @@ export const useAddItems = () => {
             addTodo(updatedTodo);
         },
         onError: (error) => {
-            // 에러 발생 시 이전 상태로 롤백
-            // if (error) {
-
-            // }
+            alert(error)
         }
     });
 };
