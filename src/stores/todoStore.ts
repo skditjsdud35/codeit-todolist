@@ -1,11 +1,11 @@
-import { GetItem, PostItem } from '@/types';
+import { GetItem } from '@/types';
 import { create } from 'zustand';
 
 // item 인터페이스 정의
 interface ItemStore {
     todos: GetItem[];
     setTodos: (todos: GetItem[]) => void;
-    addTodo: (todo: PostItem) => void;
+    addTodo: (todo: GetItem) => void;
 }
 
 // Item 상태 관리 store
