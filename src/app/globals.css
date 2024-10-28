@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F9FAFB;
+  --foreground: #171717;
+}
+
+body{
+  font-family: 'NanumSqure';
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('/fonts/NanumSquareB.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('/fonts/NanumSquareEB.ttf') format('truetype');
+  font-weight: 800; /* ExtraBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('/fonts/NanumSquareR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 커스텀 스크롤바 디자인 */
+
+textarea::-webkit-scrollbar {
+  width: 4px; /* 스크롤바의 너비 */
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #FDE68A; /* 스크롤바의 색상 (불투명) */
+  border-radius: 4px; /* 스크롤바의 둥근 모서리 */
+}
+
+/* 커스텀 폰트 클래스 추가 */
+.b-20 {
+  font-family: 'NanumSquare', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.b-18 {
+  font-family: 'NanumSquare', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.eb-16 {
+  font-family: 'NanumSquare', sans-serif;
+  font-weight: 800; /* ExtraBold */
+  font-size: 16px;
+}
+
+.b-16 {
+  font-family: 'NanumSquare', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.r-16 {
+  font-family: 'NanumSquare', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+}
