@@ -11,10 +11,13 @@ export const useAddItems = () => {
     return useMutation({
         mutationFn: (newTodo: PostItem) => addItems(newTodo),
         onSuccess: (data) => {
+            const { tenantId, ...rest } = data; // id와 tenantId를 분리하고 나머지 속성을 rest에 담음
+            console.log(tenantId)
             const updatedTodo: GetItem = {
-                ...data, // 서버에서 반환된 데이터
+                ...rest, // id와 tenantId를 제외한 나머지 속성 사용
                 isCompleted: false, // 필요에 따라 기본값 설정
             };
+            console.log(updatedTodo);
             addTodo(updatedTodo);
         },
         onError: (error) => {
